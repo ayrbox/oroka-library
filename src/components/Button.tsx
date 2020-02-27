@@ -48,9 +48,10 @@ const kinds = (outline: boolean): Kinds => {
 }
 
 export interface ButtonProps {
-  scale: 'small' | 'normal' | 'big'
-  kind: 'primary' | 'secondary' | 'cancel' | 'dark' | 'gray'
-  outline: boolean
+  scale?: 'small' | 'normal' | 'big'
+  kind?: 'primary' | 'secondary' | 'cancel' | 'dark' | 'gray'
+  outline?: boolean,
+  onClick?: () => void;
 };
 
 const getScale = ({ scale = 'normal' }: ButtonProps) => scales[scale]
@@ -69,5 +70,11 @@ const ButtonStyled = styled('button')<ButtonProps>`
 const Button: FC<ButtonProps> = ({ children, ...props }) => (
   <ButtonStyled {...props}>{children}</ButtonStyled>
 );
+
+Button.defaultProps = {
+  scale: 'normal',
+  kind: 'primary',
+  outline: false
+};
 
 export default Button;
