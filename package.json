@@ -28,7 +28,7 @@
     "docz": "docz dev",
     "docz:build": "docz build",
     "docz:deploy": "yarn docz:build && gh-pages -d docs",
-    "build": "tsc -p . && cp package.json ./dist",
+    "build": "tsc -p . && cp {package.json,README.md} ./dist",
     "test": "jest"
   },
   "files": [
