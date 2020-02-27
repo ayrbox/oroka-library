@@ -20,7 +20,9 @@
     "webpack": "^4.41.6"
   },
   "scripts": {
-    "docs": "docz dev",
-    "style": "styleguidist server"
+    "docz": "docz dev",
+    "docz:build": "docz build",
+    "docz:deploy": "yarn docz:build && gh-pages -d docs",
+    "build": "tsc -p . && cp package.json ./dist"
   }
 }
