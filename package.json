@@ -1,0 +1,26 @@
+{
+  "name": "oroka-library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ayrbox <srdx7@hotmail.com>",
+  "license": "MIT",
+  "Dependencies": {
+    "@emotion/core": "^10.0.27",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "@emotion/core": "^10.0.27",
+    "@emotion/styled": "^10.0.27",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "docz": "^2.2.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "webpack": "^4.41.6"
+  },
+  "scripts": {
+    "docs": "docz dev",
+    "style": "styleguidist server"
+  }
+}
